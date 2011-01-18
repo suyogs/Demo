@@ -32,16 +32,18 @@ and open the template in the editor.
     </style>
   </head>
   <body>
-      <script >
+      <script type="text/javascript" src="jquery-1.4.2.js">
+      </script>
+      <script type="text/javascript">
           {
-    "data": {
-        "sec1": [
+    var data= {
+       "sec1": [
             {
                 "pn": "Dove",
                 "mc": "Hul",
                 "up": "25"
             }
-        ],
+       ],
         "sec2": [
             {
                 "pn": "Lux",
@@ -80,51 +82,55 @@ and open the template in the editor.
     }
 }
 
-      </script>
-      <script>
+     $(document).ready(function(){
+         
           $("a").click(function()
           {
-              show("slow")
-          })
+              this.target("#sidebar")
+              document.write("show")
+              
+           })
+     })
+         
       </script>
       <div id="wrap">
           <div id="header">
-              <img src="../../html/mountain_madness_banner.jpg" width="730" height="275" alt="mountain_madness_banner"/>
+              <img src="mountain_madness_banner.jpg" width="730" height="275" alt="mountain_madness_banner"/>
           </div>
           <div id="main">
               <table border="1">
                       <tr>
                           <td>
                               
-                              <a href="#sec1" target="sidebar">
+                              <a href="#sec1" >
 
                               <img src="dove.jpg" width="150" height="150" alt="dove"/>
                               </a>        
                               </td>
                           <td>
-                              <a href="#sec2" target="sidebar">
+                              <a href="#sec2" id="sec2">
                               <img src="LUX.bmp" width="150" height="150" alt="LUX"/>
                               </a>
                               </td>
                           <td>
-                              <a href="#sec3" target="sidebar">
+                              <a href="#sec3" id="sec3">
                               <img src="dettol_soap.jpg" width="150" height="150" alt="dettol_soap"/>
                               </a>
                           </td>
                       </tr>
                       <tr>
                           <td>
-                              <a href="#sec4" target="sidebar">
+                              <a href="#sec4" id="sec4">
                               <img src="cinthol.jpg" width="150" height="150" alt="cinthol"/>
                               </a>
                               </td>
                        <td>
-                           <a href="#sec5" target="sidebar">
+                           <a href="#sec5" id="sec5">
                         <img src="medimix.jpg" width="150" height="150" alt="medimix"/>
                            </a>
                            </td>
                           <td>
-                              <a href="#sec6" target="sidebar">
+                              <a href="#sec6" id="sec6">
                               <img src="Chandrika-soap.jpg" width="150" height="150" alt="Chandrika-soap"/>
                               </a>
                               </td>
@@ -132,7 +138,7 @@ and open the template in the editor.
               </table>
 </div>
           <div id="sidebar">
-              copy right information
+              
             
           </div>
       </div>
