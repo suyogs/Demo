@@ -52,28 +52,28 @@ and open the template in the editor.
         "sec3":
             {
                 "pn": "Dettol",
-                "mc": "Hul",
+                "mc": "DETTOL",
                 "up": "22"
             }
         ,
         "sec4":
             {
                 "pn": "Cinthol",
-                "mc": "Hul",
+                "mc": "GODREJ",
                 "up": "17"
             }
         ,
         "sec5":
             {
                 "pn": "Chandrika",
-                "mc": "Hul",
+                "mc": "CHANDRIKA",
                 "up": "10"
             }
         ,
         "sec6":
             {
                 "pn": "Medimix",
-                "mc": "Hul",
+                "mc": "AYURVEDIC",
                 "up": "20"
             }
 
@@ -87,8 +87,8 @@ and open the template in the editor.
               //this.target("#sidebar")
              // document.write("show")
              var key=$(this).attr("id");
-             $ ("#sidebar").html(data[key]["pn"]);
-             alert(data[key]["pn"]);
+             $ ("#sidebar").html("Name :-   "+data[key]["pn"]+"<br/>"+"Manufactering Company :-   "+data[key]["mc"]+"<br>"+"Unit Price :-   "+data[key]["up"]);
+             //alert(data[key]["pn"]);
            });
      });
 
