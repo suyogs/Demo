@@ -34,18 +34,49 @@ and open the template in the editor.
     <script type="text/javascript" src="jquery-1.4.2.js">
     </script>
     <script type="text/javascript">
+        function onLoadMe(data){
+	alert("shown")
+}
+
+function onLoadSingle(item) {
+            $ ("#t1").html(item["id"]);
+            $ ("#t2").html(item["publish_year"]);
+            $ ("#t3").html(item["_id"]);
+          }
        $(document).ready(function(){
-       var data;
-       $.getJSON('data.json', function(json)
-       {
-           data=json;
-       });
+      
+$().ready(function(){
+
+
+   var url = 'http://192.168.2.4:5000/api/Book?callback=onLoadMe';
+    $.ajax( {
+		url : url,
+		dataType: "jsonp",
+		jsonp : "onLoadMe"
+		
+    });
+
+});
+
+
+    
        $("a").click(function()
        {
-            var key=$(this).attr("id");
-            $ ("#t1").html(data[key]["pn"]);
-            $ ("#t2").html(data[key]["mc"]);
-            $ ("#t3").html(data[key]["up"]);
+           var key=$(this).attr("id");
+
+          alert(key);
+          
+
+           var url = 'http://192.168.2.4:5000/api/Book/' + key + '?callback=onLoadMe';
+            $.ajax( {
+		url : url,
+		dataType: "jsonp",
+		jsonp : "onLoadSingle"
+
+            });
+
+              return false;
+
         });
 });
      </script>
@@ -65,7 +96,7 @@ and open the template in the editor.
                       <tr>
                           <td>
                               
-                              <a href="#sec1" id="sec1" >
+                              <a href="http://192.168.2.4:5000/api/Book/16" id="16" >
 
                               <img src="images/dove.jpg" width="150" height="150" alt="dove"/>
                               </a>        

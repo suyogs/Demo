@@ -55,7 +55,7 @@ and open the template in the editor.
       <div id="wrap">
       <div id="header">
       <table><tr><td>
-      <img src="mountain_madness_banner.jpg" width="730" height="275" alt="mountain_madness_banner" />
+      <img src="images/mountain_madness_banner.jpg" width="730" height="275" alt="mountain_madness_banner" />
       </td>
       </tr>
       </table>
@@ -67,34 +67,34 @@ and open the template in the editor.
                               
                               <a href="#sec1" id="sec1" >
 
-                              <img src="dove.jpg" width="150" height="150" alt="dove"/>
+                              <img src="images/dove.jpg" width="150" height="150" alt="dove"/>
                               </a>        
                               </td>
                           <td>
                               <a href="#sec2" id="sec2">
-                              <img src="LUX.bmp" width="150" height="150" alt="LUX"/>
+                              <img src="images/LUX.bmp" width="150" height="150" alt="LUX"/>
                               </a>
                               </td>
                           <td>
                               <a href="#sec3" id="sec3">
-                              <img src="dettol_soap.jpg" width="150" height="150" alt="dettol_soap"/>
+                              <img src="images/dettol_soap.jpg" width="150" height="150" alt="dettol_soap"/>
                               </a>
                           </td>
                       </tr>
                       <tr>
                           <td>
                               <a href="#sec4" id="sec4">
-                              <img src="cinthol.jpg" width="150" height="150" alt="cinthol"/>
+                              <img src="images/cinthol.jpg" width="150" height="150" alt="cinthol"/>
                               </a>
                               </td>
                        <td>
                            <a href="#sec5" id="sec5">
-                        <img src="medimix.jpg" width="150" height="150" alt="medimix"/>
+                        <img src="images/medimix.jpg" width="150" height="150" alt="medimix"/>
                            </a>
                            </td>
                           <td>
                               <a href="#sec6" id="sec6">
-                              <img src="Chandrika-soap.jpg" width="150" height="150" alt="Chandrika-soap"/>
+                              <img src="images/Chandrika-soap.jpg" width="150" height="150" alt="Chandrika-soap"/>
                               </a>
                               </td>
                       </tr>
