@@ -8,76 +8,117 @@ and open the template in the editor.
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\
     <style type="text/css">
-      #wrap {
-		width:750px;
-		margin:0 auto;
-		
+      #wrap
+        {
+            width:750px;
+            margin:0 auto;
 	}
-	#header {
-    	padding:5px 10px;
+	#header
+        {
+            padding:5px 10px;
         }
-        #main {
-		float:left;
-		width:360px;
-		padding:10px;
-
+        #main
+        {
+            float:left;
+            width:360px;
+            padding:10px;
 	}
-        #sidebar {
+        #sidebar
+        {
              border: 1px solid black;
-		float:right;
-		width:230px;
-		padding:10px;
-		
+            float:right;
+            width:230px;
+            padding:10px;
 	}
     </style>
+    <script type="text/javascript" src="jquery-1.4.2.js">
+    </script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+       var data;
+       $.getJSON('data.json', function(json)
+       {
+           data=json;
+       });
+       $("a").click(function()
+       {
+            var key=$(this).attr("id");
+            $ ("#t1").html(data[key]["pn"]);
+            $ ("#t2").html(data[key]["mc"]);
+            $ ("#t3").html(data[key]["up"]);
+        });
+});
+     </script>
   </head>
   <body>
+      
       <div id="wrap">
-          <div id="header">
-              <img src="images/mountain_madness_banner.jpg" width="730" height="275" alt="mountain_madness_banner"/>
-          </div>
-          <div id="main">
-              <table border="1">
+      <div id="header">
+      <table><tr><td>
+      <img src="mountain_madness_banner.jpg" width="730" height="275" alt="mountain_madness_banner" />
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div id="main">
+                <table border="1">
                       <tr>
                           <td>
                               
-                              <a href="#sec1" target="sidebar">
+                              <a href="#sec1" id="sec1" >
 
-                              <img src="images/dove.jpg" width="150" height="150" alt="dove"/>
+                              <img src="dove.jpg" width="150" height="150" alt="dove"/>
                               </a>        
                               </td>
                           <td>
-                              <a href="#sec2" target="sidebar">
-                              <img src="images/LUX.bmp" width="150" height="150" alt="LUX"/>
+                              <a href="#sec2" id="sec2">
+                              <img src="LUX.bmp" width="150" height="150" alt="LUX"/>
                               </a>
                               </td>
                           <td>
-                              <a href="#sec3" target="sidebar">
-                              <img src="images/dettol_soap.jpg" width="150" height="150" alt="dettol_soap"/>
+                              <a href="#sec3" id="sec3">
+                              <img src="dettol_soap.jpg" width="150" height="150" alt="dettol_soap"/>
                               </a>
                           </td>
                       </tr>
                       <tr>
                           <td>
-                              <a href="#images/sec4" target="sidebar">
-                              <img src="images/cinthol.jpg" width="150" height="150" alt="cinthol"/>
+                              <a href="#sec4" id="sec4">
+                              <img src="cinthol.jpg" width="150" height="150" alt="cinthol"/>
                               </a>
                               </td>
                        <td>
-                           <a href="#sec5" target="sidebar">
-                        <img src="images/medimix.jpg" width="150" height="150" alt="medimix"/>
+                           <a href="#sec5" id="sec5">
+                        <img src="medimix.jpg" width="150" height="150" alt="medimix"/>
                            </a>
                            </td>
                           <td>
-                              <a href="#sec6" target="sidebar">
-                              <img src="images/Chandrika-soap.jpg" width="150" height="150" alt="Chandrika-soap"/>
+                              <a href="#sec6" id="sec6">
+                              <img src="Chandrika-soap.jpg" width="150" height="150" alt="Chandrika-soap"/>
                               </a>
                               </td>
                       </tr>
               </table>
 </div>
           <div id="sidebar">
-              copy right information
+              <table border="1" >
+                  <tr>
+                      <td>Product</td>
+                      <td>Details</td>
+                  </tr>
+                  <tr>
+                      <td>Soap Name</td>
+                      <td id ="t1"></td>
+                  </tr>
+                  <tr>
+                      <td>Manufacturer</td>
+                      <td id="t2"></td>
+                  </tr>
+                  <tr>
+                      <td>Price</td>
+                      <td id="t3"></td>
+                  </tr>
+              </table>    
             
           </div>
       </div>
