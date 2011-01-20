@@ -37,6 +37,7 @@ and open the template in the editor.
     <script type="text/javascript" src="jquery-1.4.2.js">
     </script>
     <script type="text/javascript">
+<<<<<<< HEAD
         function onLoadMe(data){                //function call at loading pg
 	}
 
@@ -57,16 +58,30 @@ $().ready(function(){
 
 });
      var data;
+=======
+        function onload(){
+            //html('soap[<a href="data[0]" id="16"><img src="images/cinthol.jpg"/></a>]');
+        }
+           // var image1 = $('<img />').attr('src', 'images/cinthol.jpg');
+        
+       $(document).ready(function(){
+       var data,c;
+>>>>>>> 38bda378c96803a49ddf9ba764d3b75352aa23e4
        $.getJSON('data.json', function(json)
        {
            data=json;
 
            $.each(data['data'], function(n, soap){
 
-                 $('#list').html('<a href="data[0]" id="16"><img src="images/cinthol.jpg"/></a>');
-               // $("#list").append("<li><a >" + soap['id'] + "</li>")
+                 //$('#list').html('soap[<a href="data[0]" id="16"><img src="images/cinthol.jpg"/></a>]');
+                
+             //$("#list").appendText("<li>" +'<img src="images/cinthol.jpg"/>'  + "</li>")
+              $("<a href='http://www.google.com'><span>  <img src=images/cinthol.jpg>  </span></a>" ).insertAfter("#list");
+               // alert(n);
+                //alert(soap);
+                c=n;
            });
-               
+              
        });
    $("a").click(function()        //click event call
        {
@@ -97,6 +112,7 @@ $().ready(function(){
       </table>
       </div>
       <div id="main">
+<<<<<<< HEAD
 
                 <table border="1" >
                       <tr>
@@ -135,6 +151,11 @@ $().ready(function(){
                           </td>
                       </tr>
                 </table>
+=======
+          <ul id="list" >
+         
+          </ul>
+>>>>>>> 38bda378c96803a49ddf9ba764d3b75352aa23e4
 </div>
           <div id="sidebar">
               <table border="1" >
