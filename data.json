@@ -1,44 +1,37 @@
 {
-       "sec1":
-            {
-                "pn": "Dove",
-                "mc": "Hul",
-                "up": "25"
-            }
-      ,
-        "sec2":
-            {
-                "pn": "Lux",
-                "mc": "Hul",
-                "up": "12"
-            }
-        ,
-        "sec3":
-            {
-                "pn": "Dettol",
-                "mc": "DETTOL",
-                "up": "22"
-            }
-        ,
-        "sec4":
-            {
-                "pn": "Cinthol",
-                "mc": "GODREJ",
-                "up": "17"
-            }
-        ,
-        "sec5":
-            {
-                "pn": "Chandrika",
-                "mc": "CHANDRIKA",
-                "up": "10"
-            }
-        ,
-        "sec6":
-            {
-                "pn": "Medimix",
-                "mc": "AYURVEDIC",
-                "up": "20"
-            }
-
-    }
+    "data": [
+        {
+            "_id": "6B392CF6-0D1C-11E0-9653-608027F9E5E4",
+            "category_id": 8,
+            "publish_date": "2004-01-08",
+            "publish_year": 2004,
+            "title": "Design and Analysis of DNA Microarray Investigations",
+            "price": 59.95,
+            "isbn": "0387001352",
+            "id": 16,
+            "classification": "A"
+        },
+        {
+            "_id": "6B4AE374-0D1C-11E0-BBB2-608027F9E5E4",
+            "category_id": 1,
+            "publish_date": "2004-01-08",
+            "publish_year": 2004,
+            "title": "Planning Based on Decision Theory",
+            "price": 69.95,
+            "isbn": "3211407561",
+            "id": 17,
+            "classification": "C"
+        },
+        {
+            "_id": "6B5B2428-0D1C-11E0-A238-608027F9E5E4",
+            "category_id": 4,
+            "publish_date": "2004-01-08",
+            "publish_year": 2004,
+            "title": "The Theory of Chaotic Attractors",
+            "price": 69.95,
+            "isbn": "0387403493",
+            "id": 18,
+            "classification": "B"
+        }
+    ]
+}
