@@ -39,7 +39,16 @@ and open the template in the editor.
        $.getJSON('data.json', function(json)
        {
            data=json;
+
+           $.each(data['data'], function(n, soap){
+
+                 $('#list').html('<a href="data[0]" id="16"><img src="images/cinthol.jpg"/></a>');
+               // $("#list").append("<li><a >" + soap['id'] + "</li>")
+           });
+               
        });
+     
+       
        $("a").click(function()
        {
             var key=$(this).attr("id");
@@ -61,44 +70,10 @@ and open the template in the editor.
       </table>
       </div>
       <div id="main">
-                <table border="1">
-                      <tr>
-                          <td>
-                              
-                              <a href="#sec1" id="sec1" >
+          <ul id="list" >
 
-                              <img src="images/dove.jpg" width="150" height="150" alt="dove"/>
-                              </a>        
-                              </td>
-                          <td>
-                              <a href="#sec2" id="sec2">
-                              <img src="images/LUX.bmp" width="150" height="150" alt="LUX"/>
-                              </a>
-                              </td>
-                          <td>
-                              <a href="#sec3" id="sec3">
-                              <img src="images/dettol_soap.jpg" width="150" height="150" alt="dettol_soap"/>
-                              </a>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>
-                              <a href="#sec4" id="sec4">
-                              <img src="images/cinthol.jpg" width="150" height="150" alt="cinthol"/>
-                              </a>
-                              </td>
-                       <td>
-                           <a href="#sec5" id="sec5">
-                        <img src="images/medimix.jpg" width="150" height="150" alt="medimix"/>
-                           </a>
-                           </td>
-                          <td>
-                              <a href="#sec6" id="sec6">
-                              <img src="images/Chandrika-soap.jpg" width="150" height="150" alt="Chandrika-soap"/>
-                              </a>
-                              </td>
-                      </tr>
-              </table>
+              
+          </ul>
 </div>
           <div id="sidebar">
               <table border="1" >
