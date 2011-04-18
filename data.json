@@ -1,0 +1,44 @@
+{
+       "sec1":
+            {
+                "pn": "Dove",
+                "mc": "Hul",
+                "up": "25"
+            }
+      ,
+        "sec2":
+            {
+                "pn": "Lux",
+                "mc": "Hul",
+                "up": "12"
+            }
+        ,
+        "sec3":
+            {
+                "pn": "Dettol",
+                "mc": "DETTOL",
+                "up": "22"
+            }
+        ,
+        "sec4":
+            {
+                "pn": "Cinthol",
+                "mc": "GODREJ",
+                "up": "17"
+            }
+        ,
+        "sec5":
+            {
+                "pn": "Chandrika",
+                "mc": "CHANDRIKA",
+                "up": "10"
+            }
+        ,
+        "sec6":
+            {
+                "pn": "Medimix",
+                "mc": "AYURVEDIC",
+                "up": "20"
+            }
+
+    }

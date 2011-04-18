@@ -8,100 +8,60 @@ and open the template in the editor.
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\
     <style type="text/css">
-      #wrap {
-		width:750px;
-		margin:0 auto;
-		
+      #wrap
+        {
+            width:750px;
+            margin:0 auto;
 	}
-	#header {
-    	padding:5px 10px;
+	#header
+        {
+            padding:5px 10px;
         }
-        #main {
-		float:left;
-		width:360px;
-		padding:10px;
-
+        #main
+        {
+            float:left;
+            width:360px;
+            padding:10px;
 	}
-        #sidebar {
+        #sidebar
+        {
              border: 1px solid black;
-		float:right;
-		width:230px;
-		padding:10px;
-		
+            float:right;
+            width:230px;
+            padding:10px;
 	}
     </style>
     <script type="text/javascript" src="jquery-1.4.2.js">
-      </script>
-      <script type="text/javascript">
-
-    var data= {
-       "sec1":
-            {
-                "pn": "Dove",
-                "mc": "Hul",
-                "up": "25"
-            }
-      ,
-        "sec2":
-            {
-                "pn": "Lux",
-                "mc": "Hul",
-                "up": "12"
-            }
-        ,
-        "sec3":
-            {
-                "pn": "Dettol",
-                "mc": "DETTOL",
-                "up": "22"
-            }
-        ,
-        "sec4":
-            {
-                "pn": "Cinthol",
-                "mc": "GODREJ",
-                "up": "17"
-            }
-        ,
-        "sec5":
-            {
-                "pn": "Chandrika",
-                "mc": "CHANDRIKA",
-                "up": "10"
-            }
-        ,
-        "sec6":
-            {
-                "pn": "Medimix",
-                "mc": "AYURVEDIC",
-                "up": "20"
-            }
-
-    }
-;
-
-     $(document).ready(function(){
-
-          $("a").click(function()
-          {
-              //this.target("#sidebar")
-             // document.write("show")
-             var key=$(this).attr("id");
-             $ ("#sidebar").html("Name :-   "+data[key]["pn"]+"<br/>"+"Manufactering Company :-   "+data[key]["mc"]+"<br>"+"Unit Price :-   "+data[key]["up"]);
-             //alert(data[key]["pn"]);
-           });
-     });
-
-      </script>
+    </script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+       var data;
+       $.getJSON('data.json', function(json)
+       {
+           data=json;
+       });
+       $("a").click(function()
+       {
+            var key=$(this).attr("id");
+            $ ("#t1").html(data[key]["pn"]);
+            $ ("#t2").html(data[key]["mc"]);
+            $ ("#t3").html(data[key]["up"]);
+        });
+});
+     </script>
   </head>
   <body>
       
       <div id="wrap">
-          <div id="header">
-              <img src="mountain_madness_banner.jpg" width="730" height="275" alt="mountain_madness_banner"/>
-          </div>
-          <div id="main">
-              <table border="1">
+      <div id="header">
+      <table><tr><td>
+      <img src="mountain_madness_banner.jpg" width="730" height="275" alt="mountain_madness_banner" />
+      </td>
+      </tr>
+      </table>
+      </div>
+      <div id="main">
+                <table border="1">
                       <tr>
                           <td>
                               
@@ -141,7 +101,24 @@ and open the template in the editor.
               </table>
 </div>
           <div id="sidebar">
-              
+              <table border="1" >
+                  <tr>
+                      <td>Product</td>
+                      <td>Details</td>
+                  </tr>
+                  <tr>
+                      <td>Soap Name</td>
+                      <td id ="t1"></td>
+                  </tr>
+                  <tr>
+                      <td>Manufacturer</td>
+                      <td id="t2"></td>
+                  </tr>
+                  <tr>
+                      <td>Price</td>
+                      <td id="t3"></td>
+                  </tr>
+              </table>    
             
           </div>
       </div>
