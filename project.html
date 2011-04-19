@@ -34,18 +34,28 @@ and open the template in the editor.
     <script type="text/javascript" src="jquery-1.4.2.js">
     </script>
     <script type="text/javascript">
+        function onload(){
+            //html('soap[<a href="data[0]" id="16"><img src="images/cinthol.jpg"/></a>]');
+        }
+           // var image1 = $('<img />').attr('src', 'images/cinthol.jpg');
+        
        $(document).ready(function(){
-       var data;
+       var data,c;
        $.getJSON('data.json', function(json)
        {
            data=json;
 
            $.each(data['data'], function(n, soap){
 
-                 $('#list').html('<a href="data[0]" id="16"><img src="images/cinthol.jpg"/></a>');
-               // $("#list").append("<li><a >" + soap['id'] + "</li>")
+                 //$('#list').html('soap[<a href="data[0]" id="16"><img src="images/cinthol.jpg"/></a>]');
+                
+             //$("#list").appendText("<li>" +'<img src="images/cinthol.jpg"/>'  + "</li>")
+              $("<a href='http://www.google.com'><span>  <img src=images/cinthol.jpg>  </span></a>" ).insertAfter("#list");
+               // alert(n);
+                //alert(soap);
+                c=n;
            });
-               
+              
        });
      
        
@@ -71,8 +81,7 @@ and open the template in the editor.
       </div>
       <div id="main">
           <ul id="list" >
-
-              
+         
           </ul>
 </div>
           <div id="sidebar">
